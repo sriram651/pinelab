@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar{
+  background: white;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14.4px;
+  font-family: 'Roboto' , sans-serif;
+  font-weight: 400;
+  height: 50px;
+  z-index: 5;
+}
+.picon{
+  height: 20px;
+}
+.navlist{
+  list-style-type: none;
+  font-family: Roboto;
+  color: #59595B;
+}
+.navlist{
+  outline: none;
+}
+.navlist li{
+  display: inline-block;
+  padding: 20px 10px;
+  font-size: 17px;
+}
+.navbar a{
+  text-decoration: none;
+  color: #59595B;
+}
+.navlist a:hover{
+  outline: none;
+  padding: 5.75px 0px;
+  border-bottom: 3.75px solid #2ded80;
+}
+.cont{
+  margin: 13px;
+  list-style: none;
+  display: inline-block;
+  padding: 7px 10px;
+  outline-color: #2ded80;
+  border: 1px solid #2ded80;
+  background-image: linear-gradient(75deg,#15d69b 0,#3eb449 48%,#7edb3a 100%);
+}
+.cont a{
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  align-items: center;
+}
+.cont hover{
+  background-image: linear-gradient(75deg,#7edb3a 0,#3eb449 48%,#15d69b 100%);
+}
+.conticon{
+  display: none;
+  margin: 5px;
+  padding: 5px 8px;
+  list-style: none;
+  outline-color: #2ded80;
+  border: 1px solid #2ded80;
+  background-image: linear-gradient(75deg,#15d69b 0,#3eb449 48%,#7edb3a 100%);
+}
+.conticon a{
+  align-items: center;
+  font-size: 20px;
+}
+.menu{
+  display: block;
+}
+.top-hr{
+  height: 3px;
+  top: 48px;
+  position: fixed;
+  border: none;
+  background: linear-gradient(to right, #2ded80,#42529e);
+  width: 540px;
+  margin-right: 20px;
+  animation: anim 3s ease in out infinite;
+}
+@keyframes anim {
+  0%{
+    background-position: 0 25%;
+  }
+  25%{
+    background-position: 25% 50%;
+  }
+  50%{
+    background-position: 50% 75%;
+  }
+  75%{
+    background-position: 75% 100%;
+  }
+  100%{
+    background-position: 100% 0%;
+  }
+}
+.icon hover{
+  cursor: pointer;
+}
+.hero-banner{
+  position: relative;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.hero-banner .container{
+  padding: 100px 0 0 0;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+.hero-banner-content{
+  padding: 0px;
+  margin: 0 23%;
+  width: 54%;
+}
+.hero-banner-content h1{
+  font-size: 60px;
+  margin: 0 0 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+}
+.text-center{
+  padding: 5px;
+  font-size: 42px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #28a745;
+}
+.start-content{
+  margin: 0 11.2%;
+  padding: 30px 0 0;
+  color: grey;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+.start-content a{
+  text-decoration: none;
+  margin: 0px;
+}
+.know-download{
+  outline: none;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 20%;
+}
+.know-btn{
+  border: none;
+  display: inline-block;
+  margin: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 15px 30px;
+  background-image: linear-gradient(75deg,#15d69b 0,#3eb449 48%,#7edb3a 100%);
+}
+.download-btn{
+  border: 1px solid #2ded80;
+  display: inline-block;
+  margin: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 15px 30px;
+  background: transparent;
+}
+.know-btn a .download-btn a{
+  text-decoration: none;
+}
+.know-btn a{
+  color: white;
+  font-size: 16px;
+}
+.download-btn a{
+  color: #2ded80;
+  font-size: 16px;
+}
+.fresh{
+  margin: 100px 0 0  0;
+  display: flex;
+}
+.fresh .container{
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.fresh .container .fresh-from{
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 42px;
+  color: #a7a9ac;
+}
+/*.fresh-hr{
+  height: 4px;
+  border: none;
+  margin-left: -100px;
+  margin-top: -15px;
+  position: fixed;
+  top: 600px;
+  width: 18.5%;
+  background: linear-gradient(to right, white, #28a745);
+}*/
+#img-slide{
+  overflow: hidden;
+}
+#img-slide figure{
+  position: relative;
+  width: 400%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+  animation-play-state: running;
+  animation-timing-function: step-start;
+}
+#img-slide figure div{
+  width: 25%;
+  float: left;
+}
+#img-slide figure img{
+  z-index: -1;
+  width: 1440px;
+  height: 400px;
+  position: absolute;
+}
+#img-slide section{
+  z-index: 1;
+  margin-top: 275px;
+  margin-left: 35px;
+}
+#img-slide section h2{
+  color: white;
+  font-family: Roboto;
+  font-weight: 800;
+  font-size: 40px;
+}
+#img-slide section p{
+  color: white;
+  font-family: Roboto;
+  font-weight: 200;
+  font-size: 16px;
+}
+#img-slide section .know-download{
+  margin-left: 200px;
+}
+#img-slide section .download-btn{
+  background: white;
+}
+#img-slide section .know-download a{
+  text-decoration: none;
+}
+@keyframes slider {
+  0%{
+    left: 0;
+  }
+  25%{
+    left: -100%;
+  }
+  50%{
+    left: -200%
+  }
+  75%{
+    left: -300%;
+  }
+  100%{
+    left: 0;
+  }
+}
+.grow-business{
+  margin: 0;
+  margin-top: 100px;
+  margin-left: 50px;
+  overflow: hidden;
+}
+.grow-business h1{
+  font-family: Roboto;
+  font-size: 60px;
+  line-height: 1;
+  color: black;
+  font-weight: 900px;
+}
+.grow-business h1 span{
+  color: #15d69b;
+}
+.grow-business figure{
+  display: flex;
+  position: relative;
+  left: 0;
+  margin: 0;
+  width: 160%;
+  animation: 10s slider-2 infinite;
+  animation-timing-function: ease;
+}
+.grow-business figure div{
+  width: 20%;
+  float: left;
+}
+.grow-business figure div h3{
+  color: #000;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300px;
+  font-size: 2vw;
+  line-height: 2;
+}
+@keyframes slider-2 {
+  0%{
+    left: 0%;
+  }
+  20%{
+    left: -20%;
+  }
+  40%{
+    left: -40%;
+  }
+  60%{
+    left: -60%;
+  }
+  80%{
+    left: -80%;
+  }
+  100%{
+    left: 0%;
+  }
+}
+@media all and (max-width: 768px) {
+  .navlist{
+    display: none;
+  }
+  .picon{
+    height: 20px;
+    display: flow-root;
+  }
+  hr{
+    display: none;
+  }
+  .cont{
+    display: none;
+  }
+  .conticon{
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 4px;
+  }
+  .icon{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .know-btn{
+    height: 38px;
+    padding: 11px 23px;
+  }
+  .download-btn{
+    height: 38px;
+    padding: 11px 23px;
+    font-size: 12px;
+  }
+  .know-btn a{
+    font-size: 10px;
+  }
+  .download-btn a{
+    font-size: 10px;
+  }
+  .hero-banner-content h1{
+    font-size: 6vw;
+  }
+  .text-center{
+    font-size: 4vw;
+  }
+  .start-content{
+    font-size: 2.75vw;
+  }
+  .hero-banner .container{
+    padding: 40px 0 0 0;
+  }
+  .fresh{
+    margin: 40px 0 0 0;
+  }
+  .grow-business{
+    margin-top: 40px;
+  }
+}
+@media all and (min-width: 1200px){
+  .fresh .container{
+    max-width: 1140px;
+  }
+}
+@media all and (max-width: 1440px){
+  #img-slide figure img{
+    max-width: 1440px;
+  }
+  .grow-business h1{
+    font-size: 48px;
+    line-height: 1;
+  }
+}
+@media all and (max-width: 992px){
+  .fresh .container{
+    max-width: 960px;
+  }
+  #img-slide figure img{
+    max-width: 992px;
+  }
+  #img-slide section h2{
+    color: white;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 25px;
+  }
+  #img-slide section p{
+    color: white;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 12px;
+  }
+  #img-slide section{
+    margin-top: 300px;
+  }
+  .grow-business figure{
+    width: 180%;
+  }
+  .grow-business figure div{
+    width:30%;
+  }
+}
+@media all and (max-width: 768px){
+  .fresh .container{
+    max-width: 720px;
+  }
+  #img-slide figure img{
+    max-width: 768px;
+  }
+  #img-slide section h2{
+    color: white;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: 25px;
+  }
+  #img-slide section p{
+    color: white;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 12px;
+  }
+  #img-slide section{
+    margin-top: 320px;
+  }
+  .grow-business figure{
+    width: 200%;
+  }
+  .grow-business figure div{
+    width:40%;
+  }
+}
+@media all and (max-width: 576px){
+  .fresh .container{
+    max-width: 540px;
+  }
+  #img-slide figure img{
+    max-width: 576px;
+  }
+  #img-slide section h2{
+    color: white;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  #img-slide section p{
+    color: white;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 8px;
+  }
+  #img-slide section{
+    margin-top: 340px;
+  }
+  .grow-business figure{
+    width: 300%;
+  }
+  .grow-business figure div{
+    width:60%;
+  }
+}
+@media all and (max-width: 480px){
+  #img-slide figure img{
+    max-width: 480px;
+  }
+  #img-slide section h2{
+    color: white;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  #img-slide section p{
+    color: white;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 8px;
+  }
+  #img-slide section{
+    margin-top: 330px;
+  }
+  .grow-business figure{
+    width: 400%;
+  }
+  .grow-business figure div{
+    width:80%;
+  }
+}
+@media all and (max-width: 360px){
+  #img-slide figure img{
+    max-width: 360px;
+  }
+  #img-slide section h2{
+    color: white;
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 16px;
+  }
+  #img-slide section p{
+    color: white;
+    font-family: Roboto;
+    font-weight: 100;
+    font-size: 8px;
+  }
+  .grow-business figure{
+    width: 600%;
+  }
+  .grow-business figure div{
+    width:100%; 
+  }
+}
+@media all and (max-width: 300px) {
+  .cont{
+    display: none;
+  }
+}
